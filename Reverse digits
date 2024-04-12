@@ -1,0 +1,26 @@
+Problem link:https:https://www.geeksforgeeks.org/problems/reverse-digit0316/1?page=1&difficulty=School&sortBy=submissions
+Problem:
+You are given an integer N, reverse the digits of given number N, ensuring that the reversed number has no leading zeroes.
+Return the resulting reversed number.
+
+Example 1:
+Input: 200
+Output: 2
+Explanation: By reversing the digts of 
+number, number will change into 2.
+
+Solution:
+class Solution
+{
+    public long reverse_digit(long n)
+    {
+        long rev = 0;
+        while(n > 0)
+        {
+            long rem = n%10;
+            rev = (rev * 10) + rem;
+            n = n/10;
+        }
+        return rev;
+    }
+}
