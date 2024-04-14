@@ -1,0 +1,27 @@
+Problem link:https://www.geeksforgeeks.org/problems/remove-duplicate-elements-from-sorted-array/0
+
+Solution:
+
+//User function Template for Java
+
+class Solution {
+    int remove_duplicate(int a[],int n){
+     int res[] = new int[n];
+        int j=0;
+       for(int i=1;i<n;i++)
+       {
+        if(a[i] != a[i-1])
+        {
+            res[j++] = a[i-1];
+
+        }
+      }
+      res[j++] = a[n-1];
+      res = Arrays.copyOf(res,j);
+       for(int i=0; i<j; i++)
+       {
+           a[i] = res[i];
+       }
+       return j;
+    }
+}
